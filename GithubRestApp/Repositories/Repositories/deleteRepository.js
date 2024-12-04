@@ -3,7 +3,7 @@
  *
  * This function makes a DELETE request to the GitHub API to delete the specified repository.
  *
- * **Important:** This function is specific to Google Apps Script and uses the `Lab_GithubHttpApp.fetcher` library to make the HTTP requests.
+ * **Important:** This function is specific to Google Apps Script and uses the `GithubHttpApp.fetcher` library to make the HTTP requests.
  *
  * @async
  * @param {string} owner - The owner of the repository.
@@ -17,9 +17,9 @@
     
     const endpoint = GH_API + `/repos/${owner}/${repo}`;
     
-    const response = await Lab_GithubHttpApp.deleter(GH_TOKEN, endpoint);
+    const response = await GithubHttpApp.deleter(GH_TOKEN, endpoint);
        
-    return Lab_GithubHttpApp.handleHttpStatus(response.getResponseCode());
+    return GithubHttpApp.handleHttpStatus(response.getResponseCode());
     
   } catch (error) {
     Logger.log('deleteRepository error: ' + error.message);
