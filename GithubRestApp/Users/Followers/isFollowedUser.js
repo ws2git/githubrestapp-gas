@@ -6,7 +6,7 @@
  * @param {string} username - The GitHub username to check.
  * @returns {Promise<any>} A Promise that resolves with the GitHub API response or rejects with an error.
  */
-async function isFollowedUser(GH_TOKEN, username) {
+async function isFollowedUser(username, GH_TOKEN) {
   
   try {
 

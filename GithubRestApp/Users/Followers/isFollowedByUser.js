@@ -9,7 +9,7 @@
  * @param {string} target_user - The GitHub username of the user to check if they are following.
  * @returns {Promise<any>} A Promise that resolves with the GitHub API response or rejects with an error.
  */
-async function isFollowedByUser(GH_TOKEN, username, target_user) {
+async function isFollowedByUser(username, target_user, GH_TOKEN) {
   
   try {
 

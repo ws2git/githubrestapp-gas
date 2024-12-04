@@ -7,7 +7,7 @@
  *   - `success` (boolean): Indicates whether the operation was successful.
  *   - `message` (string): A message describing the result of the operation.
  */
-async function unfollowUser(GH_TOKEN, username) {
+async function unfollowUser(username, GH_TOKEN) {
   
   try {
     
