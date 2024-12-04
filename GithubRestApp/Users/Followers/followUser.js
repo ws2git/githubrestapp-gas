@@ -7,7 +7,7 @@
  *   - `success` (boolean): Indicates whether the operation was successful.
  *   - `message` (string): A message describing the result of the operation.
  */
-async function followUser(GH_TOKEN, username) {
+async function followUser(username, GH_TOKEN) {
   
   try {
   

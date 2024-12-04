@@ -3,7 +3,7 @@
  * 
  * This function makes a POST request to the GitHub API to create a new private repository with the specified name.
  * 
- * **Important:** This function is specific to Google Apps Script and uses the `Lab_GithubHttpApp.fetcher` library to make the HTTP requests.
+ * **Important:** This function is specific to Google Apps Script and uses the `GithubHttpApp.fetcher` library to make the HTTP requests.
  *  
  * @async
  * @param {Object} options - The options to create a repository.
@@ -23,10 +23,10 @@ async function createRepository(options, GH_TOKEN) {
     // Create the payload correctly as an object
     const payload = Object.assign({}, defaultOptions, options);
 
-    const response = await Lab_GithubHttpApp.poster(GH_TOKEN, endpoint, payload);
+    const response = await GithubHttpApp.poster(GH_TOKEN, endpoint, payload);
 
     if (response.getResponseCode() !== 201) {
-      return Lab_GithubHttpApp.handleHttpStatus(response.getResponseCode());
+      return GithubHttpApp.handleHttpStatus(response.getResponseCode());
     }
     
     return response;
